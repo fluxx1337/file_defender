@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDefender", "FileDefender.csproj", "{17A6076D-5D8D-4827-8FE5-D1719E6A62E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17A6076D-5D8D-4827-8FE5-D1719E6A62E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A6076D-5D8D-4827-8FE5-D1719E6A62E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A6076D-5D8D-4827-8FE5-D1719E6A62E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A6076D-5D8D-4827-8FE5-D1719E6A62E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4C7FF02-8344-4631-98B2-5AD172436AAC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,46 @@
+﻿<mah:MetroWindow x:Class="FileDefender.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:local="clr-namespace:FileDefender" 
+                    Title="FileDefender"
+                 Width="600"
+                 Height="439"
+                 MinWidth="400"
+                 MinHeight="300"
+                 WindowStartupLocation="CenterScreen"
+                 mc:Ignorable="d" 
+                 ResizeMode="CanResizeWithGrip" 
+                 WindowStyle="ThreeDBorderWindow">
+    <mah:MetroWindow.Resources>
+        <local:BoolToCheckConverter x:Key="BoolToCheckConverter"/>
+    </mah:MetroWindow.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Content="Add File" Click="AddFile_Click" Margin="5"/>
+            <Button Content="Add Folder" Click="AddFolder_Click" Margin="5"/>
+            <Button Content="Remove File" Click="RemoveFile_Click" Margin="5"/>
+            <Button Content="Encrypt" Click="Encrypt_Click" Margin="5"/>
+            <Button Content="Decrypt" Click="Decrypt_Click" Margin="5"/>
+            <Button Content="Change Password" Click="ChangePassword_Click" Margin="5"/>
+        </StackPanel>
+
+        <DataGrid x:Name="FileList" Grid.Row="1" Margin="5" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Status" Binding="{Binding IsEncrypted, Converter={StaticResource BoolToCheckConverter}}" Width="100"/>
+                <DataGridTextColumn Header="FILENAME" Binding="{Binding FileName}" Width="*"/>
+                <DataGridTextColumn Header="PATH" Binding="{Binding Path}" Width="2*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox x:Name="LogTextBox" Grid.Row="2" Margin="5" Height="100" IsReadOnly="True" VerticalScrollBarVisibility="Auto"/>
+    </Grid>
+</mah:MetroWindow>
